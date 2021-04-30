@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
   <title>Studio Week 4!</title>
@@ -5,7 +7,7 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
-    #map{height: 100%}
+    #map{ height: 100% }
   </style>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -43,7 +45,7 @@
   // load GeoJSON from an external file
   $.getJSON("data/rodents.geojson",function(data){
     var ratIcon = L.icon({
-    iconUrl: 'images/rat.gif',
+    iconUrl: 'images/rat.png',
     iconSize: [50,40]
   });
     // add GeoJSON layer to the map once the file is loaded
