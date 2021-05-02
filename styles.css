@@ -49,16 +49,15 @@ h3 {
 }
 
 p {
-  font-size: 0.85em;
-  margin: 10px;
-  text-align: left;
+  font-family: Helvetica, Arial, Verdana;
+  font-size: 80px
 }
 
 /**
 * Create a position for the map
 * on the page */
 #map {
-  position: relative;
+  position: absolute;
   top: 200px;
   bottom: 0;
   width: 100%;
@@ -69,7 +68,7 @@ p {
 * (information box and legend) will be displayed
 * on the page. */
 .map-overlay {
-  position: relative;
+  position: absolute;
   bottom: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.8);
@@ -102,3 +101,5 @@ p {
   height: 10px;
   margin-right: 5px;
 }
+
+/* Popup styling */
