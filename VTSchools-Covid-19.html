@@ -45,7 +45,7 @@
 
   <script>
   // initalize the map
-  var map = L.map('map').setView([43.92, -72.67], 13);
+  var map = L.map('map').setView([43.92, -72.67], 7);
 
   // load base map tile layer.
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -55,11 +55,12 @@
     minZoom: 6
   }).addTo(map);
 
-
   $.getJSON("https://kpecsok98.github.io/studio-week4/data/VTSchool_Covid.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
         L.geoJson(data).addTo(map);
         });
+
+
 
    </script>
   </body>
