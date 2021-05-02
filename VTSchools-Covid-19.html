@@ -56,9 +56,19 @@
   }).addTo(map);
 
   $.getJSON("https://kpecsok98.github.io/studio-week4/data/VTCovidSchools.geojson",function(data){
+    var schoolIcon = L.icon({
+      iconUrl: 'https://kpecsok98.github.io/studio-week4/images/school.png',
+      iconSize: [30,30]
+    });
     // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-});
+    var vtccovidschools = L.geoJson(data ,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: schoolIcon})
+        marker.bindPopup('<b>School: </b>' + feature.properties.School + '<br/><b>Town: </b>' + feature.properties.Town + '<br/><b> Total Cases From Outbreak: </b>' + feature.properties.Total + '<br/><b> Outbreak Start Date: </b>' + feature.properties.Start_Date + '<br/><b> Outbreak End Date: </b>' + feature.properties.End_Date + '<br/><b> School Type: </b>' + feature.properties.Type)
+        return marker;
+       }
+     } ).addTo(map);
+   });
 
 
    </script>
