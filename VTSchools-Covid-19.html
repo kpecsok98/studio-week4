@@ -56,6 +56,7 @@
     minZoom: 6
   }).addTo(map);
 
+  // Geojson data conaining Vermont Covid Data.
   $.getJSON("https://kpecsok98.github.io/studio-week4/data/VTCovidSchools.geojson",function(data){
     var schoolIcon = L.icon({
       iconUrl: 'https://kpecsok98.github.io/studio-week4/images/school.png',

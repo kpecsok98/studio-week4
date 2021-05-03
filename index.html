@@ -55,7 +55,7 @@
   }).addTo(map);
 
 
-
+ // Load geojson data to the map.
   map.setZoom(12)
   $.getJSON("https://kpecsok98.github.io/studio-week4/data/rodents.geojson",function(data){
     var locations = data.features.map(function(rat) {
